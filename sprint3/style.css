@@ -3,7 +3,7 @@ STYLES
 */
 
 :root {
-  --transition: 0.45s;
+  --transition: 0.5s;
 }
 
 html {
@@ -107,7 +107,6 @@ GRID
 .container:hover .wrapper {
   font-size: 1rem;
   line-height: 1rem;
-
 }
 
 .container:hover .t span,
@@ -115,12 +114,15 @@ GRID
 .o-p span,
 .a-r-g span {
   margin-top: 0;
-  transition: var(--transition);
+  transition: calc(var(--transition) / 4);
 }
 
 .container .wrapper:hover {
-  font-size: 3rem;
-  line-height: 3rem;
+  font-size: 2rem;
+  line-height: 2rem;
+  opacity: 1;
+  background: white;
+  color: black;
 }
 
 .container .t.wrapper:hover {
@@ -144,7 +146,6 @@ GRID
 .wrapper {
   transition: var(--transition);
   border: 2.5px solid white;
-  box-sizing: bo;
 }
 
 .t {
