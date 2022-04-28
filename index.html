@@ -7,8 +7,86 @@
     <title>CSS Sprint (Book Cover by Emil Ruder)</title>
 </head>
 <body>
-    <a href="/sprint1">Sprint 1</a>
-    <a href="/sprint2">Sprint 2</a>
-    <a href="/sprint3">Sprint 3</a>
+    <div>
+        <a href="/sprint1">
+            <div>
+                Sprint 1
+            </div>
+        </a>
+        <a href="/sprint2">
+            <div>
+                Sprint 2
+            </div>
+        </a>
+        <a href="/sprint3">
+            <div>
+                Sprint 3
+            </div>
+        </a>
+    </div>
 </body>
 </html>
+
+<style>
+    * {
+        margin: 0;
+    }
+    html {
+        padding: 2vw
+    }
+    body > div {
+        display: flex;
+    }
+    body div a {
+        width: 100%;
+        min-height: calc(100vh - 4vw);
+        display: flex;
+        background-color: black;
+        text-decoration: none;
+        border-right: 5px solid white;
+        transition: 0.5s;
+    }
+    body div a:last-of-type{
+        border: none;
+    }
+
+    body div a:hover {
+        padding: 0px 5vw;
+        background-color: white;
+    }
+
+    body div a div {
+        align-content: flex-end;
+        margin-top: auto;
+        font-family:Arial, Helvetica, sans-serif;
+        font-weight: 900;
+        font-size: 3vw;
+        color: white;
+        padding: 2.5vw;
+        text-transform: uppercase;
+        transition: 0.5s;
+    }
+    body div a:hover div {
+        margin-left: -5vw;
+        color: black;
+    }
+
+    @media (max-width: 670px) {
+        body > div {
+            flex-direction: column;
+        }
+        body div a {
+            min-height: calc((100vh - 4vh) / 3);
+            border-bottom: 5px solid white;
+            border-right: none;
+            padding: 0 !important;
+        }
+        body div a div {
+            margin-left: 0 !important;
+        }
+        body div a:last-of-type{
+            border: none;
+        }
+    }
+
+</style>
