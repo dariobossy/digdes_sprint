@@ -249,6 +249,7 @@ GRID
   .title {
     margin-top: -13.5vw;
     margin-bottom: 1vw;
+    margin-left: 2.5px;
   }
 
   .title div span {
@@ -312,5 +313,10 @@ GRID
   .t span {
     transform: rotate(-90deg);
     margin-top: -53vw;
+  }
+  .container .t.wrapper:hover span {
+    margin-top: -120vw;
+    font-size: 7rem;
+    transition: margin-top 0.5s;
   }
 }
