@@ -10,6 +10,11 @@ html {
     margin: 0;
 }
 
+.visible-small {
+    visibility: hidden;
+    display: none;
+  }
+
 body {
     margin: 5vw;
 }
@@ -145,9 +150,10 @@ GRID
 
   .p { grid-area: p; }
   
-  @media (max-width: 570px) {
-      .hidden {
-          display: block;
+  @media (max-width: 670px) {
+      html {
+          font-size: 17vw;
+          line-height: 20vw;
       }
     .container {  display: grid;
         /*grid-template-columns: 0.75fr 1.75fr;
@@ -161,14 +167,67 @@ GRID
           "a-r-g"
           "e-i-h-p";
       }
-      .o-p {  display: grid;
-        grid-template-columns: 1fr 1fr;
+
+      .title {
+        margin-top: -13.5vw;
+        margin-bottom: 1vw;
+    }
+
+      .title div span {
+        font-size: 0.2rem;
+        line-height: 0.2rem;
+        font-weight: 100;
+        margin-left: 0vw;
+    }
+
+      .o-p {  
+        display: grid;
+        grid-template-columns: 1fr 0.5fr;
         grid-template-rows: 1fr;
         gap: 5px 5px;
         grid-auto-flow: row;
         grid-template-areas:
-          "o"
-          "p";
+          "y p"
+          "y o";
         grid-area: o-p;
       }
+
+    .y {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        gap: 5px 5px;
+        grid-auto-flow: row;
+        grid-template-areas:
+            "y";
+        grid-area: o-p;
+        height: auto;
+        font-size: 5rem;
+        line-height: 5rem;
+        margin-right: 34%;
+    }
+
+    .y span {
+        margin-top: -7.5vw;
+    }
+
+    .o-p {
+        font-size: 2rem;
+        line-height: 2rem;
+    }
+
+    .o-p span {
+        margin-top: 0vw;
+    }
+
+    .t {
+        font-size: 6.5rem;
+        line-height: 6.5rem;
+        overflow: hidden;
+        height: 75vw;
+    }
+    .t span {
+        transform: rotate(-90deg);
+        margin-top: -53vw;
+    }
   }
