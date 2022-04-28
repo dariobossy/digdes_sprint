@@ -99,9 +99,19 @@ GRID
       "a-r-g t"
       "e-i-h-p t";
   }
+
+.container .wrapper:hover {
+    font-size: 3rem;
+    line-height: 3rem;
+}
+
+.wrapper {
+    transition: 0.45s;
+}
   
   .t { 
       grid-area: t; 
+    transition: 0.15s;
 }
   
   .y { grid-area: y; }
