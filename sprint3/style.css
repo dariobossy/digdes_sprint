@@ -121,8 +121,6 @@ GRID
   font-size: 2rem;
   line-height: 2rem;
   opacity: 1;
-  background: white;
-  color: black;
 }
 
 .container .t.wrapper:hover {
@@ -314,6 +312,7 @@ GRID
     transform: rotate(-90deg);
     margin-top: -53vw;
   }
+
   .container .t.wrapper:hover span {
     margin-top: -120vw;
     font-size: 7rem;
