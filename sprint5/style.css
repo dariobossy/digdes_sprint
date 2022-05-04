@@ -1,0 +1,240 @@
+/* 
+STYLES
+*/
+
+html {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 10vw;
+    line-height: 10vw;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.visible-small {
+    visibility: hidden;
+    display: none;
+  }
+
+body {
+    margin: 5vw;
+}
+
+.title {
+    text-align: right;
+    margin-top: -8vw;
+    margin-bottom: 2vw;
+}
+
+.title div span {
+    font-size: 0.3rem;
+    line-height: 0.3rem;
+    font-weight: 100;
+    margin-left: 2vw;
+}
+
+.wrapper {
+    text-align: center;
+    background-color: black;
+    color: white;
+}
+
+.wrapper span {
+    display: inline-block;
+    vertical-align: middle;
+    transform: rotateY(180deg);
+}
+
+.a-r-g {
+    font-size: 1.25rem;
+    line-height: 1.25rem;
+}
+
+.a-r-g span {
+    margin-top: -2.5vw;
+}
+
+.o-p {
+    font-size: 2.25rem;
+    line-height: 2.25rem;
+}
+
+.o-p span {
+    margin-top: -5vw;
+}
+
+.y {
+    font-size: 5rem;
+    line-height: 5rem;
+    height: 47.5vw;
+}
+
+.y span {
+    margin-top: -16vw;
+}
+
+.t {
+    font-size: 9rem;
+    line-height: 9rem;
+}
+
+.t span {
+    margin-top: -33vw;
+}
+
+/*
+GRID
+*/
+
+.container {  
+    max-width: 100vw;
+    display: grid;
+    /*grid-template-columns: 0.75fr 1.75fr;
+    grid-template-rows: 2fr 1fr 0.75fr 0.5fr;*/
+    gap: 5px 5px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "y t"
+      "o-p t"
+      "a-r-g t"
+      "e-i-h-p t";
+  }
+  
+  .t { 
+      grid-area: t; 
+}
+  
+  .y { grid-area: y; }
+  
+  .o-p {  display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 5px 5px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "o p";
+    grid-area: o-p;
+  }
+  
+  .o { grid-area: o; }
+  
+  .p { grid-area: p; }
+  
+  .a-r-g {  display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 5px 5px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "a r g";
+    grid-area: a-r-g;
+  }
+  
+  .a { grid-area: a; }
+  
+  .r { grid-area: r; }
+  
+  .g { grid-area: g; }
+  
+  .e-i-h-p {  display: grid;
+    grid-template-columns: 1fr 0.5fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 5px 5px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "e i h p";
+    grid-area: e-i-h-p;
+  }
+  
+  .e { grid-area: e; }
+  
+  .i { grid-area: i; }
+  
+  .h { grid-area: h; }
+
+  .p { grid-area: p; }
+  
+  @media (max-width: 670px) {
+      html {
+          font-size: 17vw;
+          line-height: 20vw;
+      }
+    .container {  display: grid;
+        /*grid-template-columns: 0.75fr 1.75fr;
+        grid-template-rows: 2fr 1fr 0.75fr 0.5fr;*/
+        gap: 5px 5px;
+        grid-auto-flow: row;
+        grid-template-areas:
+          "t"
+          "o-p"
+          "a-r-g"
+          "e-i-h-p";
+      }
+
+      .title {
+        margin-top: -13.5vw;
+        margin-bottom: 1vw;
+    }
+
+      .title div span {
+        font-size: 0.2rem;
+        line-height: 0.2rem;
+        font-weight: 100;
+        margin-left: 0vw;
+    }
+
+      .o-p {  
+        display: grid;
+        grid-template-columns: 1fr 0.5fr;
+        grid-template-rows: 1fr;
+        gap: 5px 5px;
+        grid-auto-flow: row;
+        grid-template-areas:
+          "y p"
+          "y o";
+        grid-area: o-p;
+      }
+
+    .y {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        gap: 5px 5px;
+        grid-auto-flow: row;
+        grid-template-areas:
+            "y";
+        grid-area: o-p;
+        height: auto;
+        font-size: 5rem;
+        line-height: 5rem;
+        margin-right: 34%;
+    }
+
+    .a-r-g {
+        line-height: 1.6rem;
+    }
+
+    .y span {
+        margin-top: -7.5vw;
+    }
+
+    .o-p {
+        font-size: 2rem;
+        line-height: 2rem;
+    }
+
+    .o-p span {
+        margin-top: 0vw;
+    }
+
+    .t {
+        font-size: 6.5rem;
+        line-height: 6.5rem;
+        overflow: hidden;
+        height: 75vw;
+    }
+    .t span {
+        transform: rotate(-90deg);
+        margin-top: -53vw;
+    }
+  }
